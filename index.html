@@ -62,9 +62,9 @@
 	const params = new URLSearchParams(window.location.search);
     const accId = parseInt(params.get("id"));
      const accountId = accId || 1220876;
-     const scriptPath = window.location.pathname.includes("tags")
-     ? "tags"
-     : "tag";
+   const scriptPath = params.get("path") === "tags"
+  ? "tags"
+  : "tag";
      console.log("Account-Id ->", 1220939);
 window._vwo_code || (function() {
     var account_id = accountId,
